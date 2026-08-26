@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PreBite - My Products</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#6b7770",
+                      "tertiary-fixed": "#d9e6dd",
+                      "on-secondary-container": "#19733d",
+                      "surface-tint": "#006d33",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container": "#f0eded",
+                      "surface-variant": "#e5e2e1",
+                      "surface-dim": "#dcd9d9",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#0f6d37",
+                      "surface-container-highest": "#e5e2e1",
+                      "primary": "#006b32",
+                      "on-tertiary-container": "#f5fff7",
+                      "on-tertiary-fixed": "#131e19",
+                      "inverse-primary": "#73dc8d",
+                      "primary-container": "#0e8642",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#005225",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "on-surface-variant": "#3e4a3f",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface": "#fcf9f8",
+                      "on-secondary-fixed-variant": "#005227",
+                      "outline": "#6e7a6e",
+                      "on-primary-container": "#f7fff3",
+                      "surface-container-high": "#eae7e7",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#9ff6b2",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#00210b",
+                      "tertiary": "#535f58",
+                      "background": "#fcf9f8",
+                      "on-secondary-fixed": "#00210c",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#84d998",
+                      "on-background": "#1b1b1b",
+                      "primary-fixed-dim": "#73dc8d",
+                      "primary-fixed": "#8ff9a7",
+                      "secondary-fixed": "#9ff6b2",
+                      "on-surface": "#1b1b1b",
+                      "inverse-surface": "#313030",
+                      "outline-variant": "#becabc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "unit": "4px",
+                      "xl": "40px",
+                      "margin-desktop": "64px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .bloom-shadow {
+            box-shadow: 0 4px 24px -4px rgba(11, 107, 54, 0.1);
+        }
+        .bloom-shadow-hover:hover {
+            box-shadow: 0 8px 32px -4px rgba(11, 107, 54, 0.15);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar from JSON -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-40">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-md">
+<button class="text-on-surface hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 -ml-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">My Products</h1>
+</div>
+<div class="flex items-center gap-sm">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pb-24 w-full max-w-screen-xl mx-auto md:px-margin-desktop">
+<!-- Tabs -->
+<div class="px-margin-mobile md:px-0 py-sm border-b border-surface-variant sticky top-16 bg-background/95 backdrop-blur-sm z-30">
+<div class="flex gap-lg">
+<button class="pb-sm border-b-2 border-primary text-primary font-button text-button transition-colors">
+                    Favorites
+                </button>
+<button class="pb-sm border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors font-button text-button">
+                    History
+                </button>
+</div>
+</div>
+<!-- Favorites List -->
+<div class="px-margin-mobile md:px-0 py-lg flex flex-col gap-lg">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-lg bloom-shadow bloom-shadow-hover flex flex-col sm:flex-row gap-lg group cursor-pointer">
+<div class="w-full sm:w-48 h-48 sm:h-auto bg-surface-container rounded-lg overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, brightly lit product photography shot of a 400g tub of Amul Masti Dahi yogurt against a pristine white background. The lighting is soft and even, highlighting the fresh, wholesome quality of the dairy product. The scene conveys a modern, clinical, yet organic health aesthetic typical of premium food apps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfdKXSx60YMM9jvCU1oPpwAgkZi3eRWx_Etwdm2lpYYAt9vIbgSUWNvoTN2DCrPc-cjGAQhi1084gDnsKW5SuKCSflS2eTUmZI6EZmw6QBU6sJBoNt5xVz9t4cmcGKifIFvTOh9cscJzYnPo9uwO5ozUJMf41OIRCpy5fLGaC65jJkYf0BqWz0VHr6sUcWlticnNvlJKA6hfc4GeEBUwbH_rLVC1p1StjwGJkwgtManMYup_3nmOTX"/>
+<button class="absolute top-sm right-sm bg-surface/90 backdrop-blur rounded-full p-2 flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-md">
+<div>
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Amul Masti Dahi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">400g</p>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg flex items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-title-lg text-title-lg leading-none">9.1</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-xs bg-tertiary-fixed text-on-tertiary-fixed px-sm py-xs rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="thumb_up">thumb_up</span>
+                            Excellent Choice
+                        </div>
+</div>
+<div class="flex justify-end pt-sm border-t border-surface-variant mt-auto">
+<button class="bg-surface-container hover:bg-surface-variant text-primary font-button text-button px-md py-sm rounded-lg transition-colors flex items-center gap-sm">
+                            View Details
+                            <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-lg bloom-shadow bloom-shadow-hover flex flex-col sm:flex-row gap-lg group cursor-pointer">
+<div class="w-full sm:w-48 h-48 sm:h-auto bg-surface-container rounded-lg overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright, minimalist product photo of a 500g package of Quaker Oats. The packaging is displayed cleanly against a solid white backdrop with a very soft drop shadow. The lighting emphasizes a healthy, organic breakfast setting with a fresh-tech visual appeal, perfectly aligned with a premium health analysis tool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnMRsZ7wZt0UNzgyhBLlvcPBFHdzyjq7vkz8JN9lgRJdDmvX9CcoieESy_XCoQV6vkqGRnMXOO9mgSYe6jZBQ0EJPBPPUyFGhPb1mTcrDh3cBWw1wkApxaJO4PdvCIYfyf1Ld-Ob2xA-JgPK0kOFJFtn3vnD2uIulOzDzKd8dU22iLdWl5ISGFZyKD_XSwn0_ssfnQeIUlLvSDKHfTZXgsmIj7Q1sqvNXTXKH2_X65cALrLh97YLxG"/>
+<button class="absolute top-sm right-sm bg-surface/90 backdrop-blur rounded-full p-2 flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-md">
+<div>
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Quaker Oats</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">500g</p>
+</div>
+<div class="bg-primary-fixed text-on-primary-fixed px-sm py-xs rounded-lg flex items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-title-lg text-title-lg leading-none">8.2</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-xs bg-tertiary-fixed text-on-tertiary-fixed px-sm py-xs rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="thumb_up">thumb_up</span>
+                            Good Choice
+                        </div>
+</div>
+<div class="flex justify-end pt-sm border-t border-surface-variant mt-auto">
+<button class="bg-surface-container hover:bg-surface-variant text-primary font-button text-button px-md py-sm rounded-lg transition-colors flex items-center gap-sm">
+                            View Details
+                            <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-lg bloom-shadow bloom-shadow-hover flex flex-col sm:flex-row gap-lg group cursor-pointer">
+<div class="w-full sm:w-48 h-48 sm:h-auto bg-surface-container rounded-lg overflow-hidden relative shrink-0">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, studio-lit photograph of a 400g tub of Mother Dairy Classic Curd. The pure white background and gentle shadows highlight the freshness of the dairy product. The image conveys a modern, clinical, and trustworthy aesthetic suitable for a professional-grade food health scanning application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMsCVy8IH0R1HlvitOSzH8f3nvlGL6orxwH37LBFZGaHY89ibmgYsIU_8erj08UuXz84DEJr5IdgSCezNlcSOj_SeWMB8ye6MuTiBBpjxIoESanzv4l7bw_bscOu1bNjpIJaNTda7oPpPjUVSRPUlE8RpUcajyf9z8luXzOouOzraqSqSMCdLh8HHxunqC9pUY-mvtsReX9ITNN-CW5rDRNms1ZSRrORyeG5_xL3viktbrV3m9u6cW"/>
+<button class="absolute top-sm right-sm bg-surface/90 backdrop-blur rounded-full p-2 flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="flex flex-col flex-grow justify-between gap-md">
+<div>
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">Mother Dairy Classic Curd</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">400g</p>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded-lg flex items-center gap-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-title-lg text-title-lg leading-none">8.8</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-xs bg-tertiary-fixed text-on-tertiary-fixed px-sm py-xs rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="thumb_up">thumb_up</span>
+                            Great Choice
+                        </div>
+</div>
+<div class="flex justify-end pt-sm border-t border-surface-variant mt-auto">
+<button class="bg-surface-container hover:bg-surface-variant text-primary font-button text-button px-md py-sm rounded-lg transition-colors flex items-center gap-sm">
+                            View Details
+                            <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar from JSON (Visible on Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest dark:bg-surface-container-low shadow-sm md:hidden rounded-t-xl border-t border-surface-variant">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<!-- Scan (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="barcode_scanner">barcode_scanner</span>
+<span class="font-label-md text-label-md">Scan</span>
+</a>
+<!-- Analysis / Favorites (Active Mapping) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="analytics" data-weight="fill" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md">Analysis</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

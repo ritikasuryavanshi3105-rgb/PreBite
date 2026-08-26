@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PreBite - Profile &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#6e7a6e",
+                        "primary": "#006b32",
+                        "on-surface": "#1b1b1b",
+                        "on-secondary-container": "#19733d",
+                        "on-tertiary-fixed": "#131e19",
+                        "tertiary-fixed": "#d9e6dd",
+                        "secondary-container": "#9ff6b2",
+                        "on-primary-fixed-variant": "#005225",
+                        "on-primary": "#ffffff",
+                        "secondary": "#0f6d37",
+                        "primary-container": "#0e8642",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#535f58",
+                        "inverse-primary": "#73dc8d",
+                        "background": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-primary-fixed": "#00210b",
+                        "primary-fixed-dim": "#73dc8d",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-tertiary-container": "#f5fff7",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-container": "#f7fff3",
+                        "on-background": "#1b1b1b",
+                        "surface": "#fcf9f8",
+                        "tertiary-container": "#6b7770",
+                        "primary-fixed": "#8ff9a7",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#becabc",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed": "#9ff6b2",
+                        "surface-tint": "#006d33",
+                        "on-surface-variant": "#3e4a3f",
+                        "secondary-fixed-dim": "#84d998",
+                        "on-secondary-fixed": "#00210c",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "surface-dim": "#dcd9d9",
+                        "surface-bright": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "40px",
+                        "margin-mobile": "16px",
+                        "gutter": "16px",
+                        "xs": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "button": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased pb-24">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-surface flex items-center justify-between px-margin-mobile h-16 w-full flat no shadows">
+<button aria-label="Go back" class="text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-title-lg font-title-lg font-bold text-on-surface">Profile &amp; Settings</h1>
+<button aria-label="Edit Profile" class="text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="edit">edit</span>
+</button>
+</header>
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-lg grid gap-lg">
+<!-- Profile Header -->
+<section class="flex flex-col items-center justify-center pt-md pb-lg">
+<div class="relative w-24 h-24 mb-md">
+<img alt="Profile Avatar" class="w-full h-full rounded-full object-cover border-2 border-surface-container-highest shadow-sm" data-alt="A clean, minimalist vector illustration of a person's avatar in a light green circle, conveying a friendly and modern aesthetic suitable for a health app profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVWuhVTsozWtGR9Nk5iVHGiSXWrZ_Atw-jqIgjAxcpcX0LNGmAOrmr2v8Bk28tIFB-GgUCWGnfpXCdZTXMUWHvBS4a0EZgnm1m_2SwGneHHSpxbCeU8LRovCwXiP2T9JYt_vdj9n6tNgzH3KYblUCSWDRaeAX0x2NWNee9zz_ZGG6p7R_z-m0A62JGnFS0N4vNSmIVvLrxXjEHjfk_lvaX73jbC_aedJMULgJRU8oi2tBRC8NzIaSU"/>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface mb-unit">Riya Suryawanshi</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-md">riya@example.com • Primary Profile</p>
+<button class="border border-primary text-primary font-button text-button px-md py-sm rounded-lg hover:bg-primary/5 active:scale-95 transition-all">
+                Edit Profile
+            </button>
+</section>
+<!-- Family Profiles Quick Access -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex items-center justify-between shadow-sm hover:shadow-[0_8px_16px_rgba(11,107,54,0.1)] transition-shadow cursor-pointer">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="family_restroom">family_restroom</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-medium text-on-surface">Family Profiles</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Manage personalized profiles for your family.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Personalization Section -->
+<section class="grid gap-sm">
+<h3 class="text-label-md font-label-md text-primary uppercase tracking-wider pl-sm pb-xs">Personalization</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm divide-y divide-surface-container-highest">
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-body-lg font-body-lg text-on-surface">Food Preferences</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">Balanced Nutrition</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="no_meals">no_meals</span>
+<div>
+<div class="text-body-lg font-body-lg text-on-surface">Dietary Preferences</div>
+<div class="text-label-md font-label-md text-on-surface-variant lowercase">Manage your food preferences</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="warning">warning</span>
+<span class="text-body-lg font-body-lg text-on-surface">Allergies</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">No allergies added</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="group">group</span>
+<div>
+<div class="text-body-lg font-body-lg text-on-surface">Family Preferences</div>
+<div class="text-label-md font-label-md text-on-surface-variant lowercase">Manage family recommendations</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- PreBite AI Row -->
+<section>
+<div class="bg-primary-container text-on-primary-container rounded-xl p-md flex items-center justify-between shadow-sm hover:opacity-90 transition-opacity cursor-pointer active:scale-[0.98]">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-on-primary flex items-center justify-center text-primary-container shadow-inner">
+<span class="material-symbols-outlined filled" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-medium text-on-primary-container">PreBite AI</h3>
+<p class="text-body-md font-body-md opacity-90">Your food companion</p>
+</div>
+</div>
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+<!-- App Settings Section -->
+<section class="grid gap-sm">
+<h3 class="text-label-md font-label-md text-primary uppercase tracking-wider pl-sm pb-xs">App Settings</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm divide-y divide-surface-container-highest">
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<div>
+<div class="text-body-lg font-body-lg text-on-surface">Notifications</div>
+<div class="text-label-md font-label-md text-on-surface-variant lowercase">Manage app notifications</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="palette">palette</span>
+<span class="text-body-lg font-body-lg text-on-surface">Appearance</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">System Default</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="language">language</span>
+<span class="text-body-lg font-body-lg text-on-surface">Language</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">English</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="straighten">straighten</span>
+<span class="text-body-lg font-body-lg text-on-surface">Units</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">Metric</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy & Security Section -->
+<section class="grid gap-sm">
+<h3 class="text-label-md font-label-md text-primary uppercase tracking-wider pl-sm pb-xs">Privacy &amp; Security</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm divide-y divide-surface-container-highest">
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="lock">lock</span>
+<span class="text-body-lg font-body-lg text-on-surface">Privacy</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="database">database</span>
+<span class="text-body-lg font-body-lg text-on-surface">Data &amp; Permissions</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="security">security</span>
+<span class="text-body-lg font-body-lg text-on-surface">Security</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Help & Support Section -->
+<section class="grid gap-sm">
+<h3 class="text-label-md font-label-md text-primary uppercase tracking-wider pl-sm pb-xs">Help &amp; Support</h3>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm divide-y divide-surface-container-highest">
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="help">help</span>
+<span class="text-body-lg font-body-lg text-on-surface">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="support_agent">support_agent</span>
+<span class="text-body-lg font-body-lg text-on-surface">Contact Support</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-md hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="info">info</span>
+<span class="text-body-lg font-body-lg text-on-surface">About PreBite</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="text-body-md font-body-md text-on-surface-variant">Version 1.0.0</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Logout Action -->
+<section class="pt-sm pb-lg flex justify-center">
+<button class="flex items-center gap-sm text-error hover:text-error/80 transition-colors py-sm px-md rounded-lg active:bg-error/5" onclick="document.getElementById('logoutModal').classList.remove('hidden'); document.getElementById('logoutModal').classList.add('flex')">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="text-button font-button">Log Out</span>
+</button>
+</section>
+<!-- Footer / Disclaimer -->
+<section class="bg-secondary-container/30 border border-secondary-container rounded-xl p-md text-center mt-auto mb-lg">
+<p class="text-label-md font-label-md text-on-surface-variant opacity-80 max-w-sm mx-auto leading-relaxed">
+                PreBite provides educational food and nutrition information based on available product data. It is not medical advice, diagnosis or treatment.
+            </p>
+</section>
+</main>
+<!-- Logout Modal (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm items-center justify-center p-margin-mobile transition-opacity" id="logoutModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant w-full max-w-sm p-lg animate-[fade-in_0.2s_ease-out]">
+<h3 class="text-title-lg font-title-lg text-on-surface mb-sm">Log Out?</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-lg">Are you sure you want to log out of your PreBite account?</p>
+<div class="flex justify-end gap-md">
+<button class="text-primary font-button px-md py-sm rounded-lg hover:bg-surface-variant transition-colors" onclick="document.getElementById('logoutModal').classList.add('hidden'); document.getElementById('logoutModal').classList.remove('flex')">Cancel</button>
+<button class="bg-error text-on-error font-button px-md py-sm rounded-lg hover:opacity-90 active:scale-95 transition-all" onclick="document.getElementById('logoutModal').classList.add('hidden'); document.getElementById('logoutModal').classList.remove('flex')">Log Out</button>
+</div>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl md:hidden border-t border-outline-variant shadow-sm fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="barcode_scanner">barcode_scanner</span>
+<span class="font-label-md text-label-md mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md mt-1">Analysis</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined filled" data-icon="person">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

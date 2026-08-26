@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PreBite - Product Details (Ingredients)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#131e19",
+                        "secondary-fixed-dim": "#84d998",
+                        "inverse-primary": "#73dc8d",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0eded",
+                        "secondary-container": "#9ff6b2",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#f5fff7",
+                        "surface-bright": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "on-surface": "#1b1b1b",
+                        "surface-tint": "#006d33",
+                        "primary-container": "#0e8642",
+                        "on-primary-fixed-variant": "#005225",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary-fixed": "#00210c",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-primary-fixed": "#00210b",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-fixed": "#9ff6b2",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface": "#fcf9f8",
+                        "tertiary": "#535f58",
+                        "on-primary-container": "#f7fff3",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#6b7770",
+                        "secondary": "#0f6d37",
+                        "tertiary-fixed": "#d9e6dd",
+                        "on-background": "#1b1b1b",
+                        "background": "#fcf9f8",
+                        "outline-variant": "#becabc",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#3e4a3f",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#313030",
+                        "primary-fixed": "#8ff9a7",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-fixed-dim": "#73dc8d",
+                        "surface-dim": "#dcd9d9",
+                        "outline": "#6e7a6e",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#006b32",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#19733d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "16px",
+                        "margin-mobile": "16px",
+                        "xl": "40px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "unit": "4px",
+                        "md": "16px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "button": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "button": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky z-50 bg-surface dark:bg-surface-dim flat no shadows flex items-center justify-between px-margin-mobile h-16 border-b border-surface-variant">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 -ml-2 rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface flex-1 text-center truncate px-4">Product Details</h1>
+<div class="flex items-center gap-1">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 rounded-full">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform p-2 rounded-full">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto md:px-margin-desktop">
+<!-- Product Summary Header (Compact) -->
+<section class="p-margin-mobile bg-surface-container-lowest md:rounded-2xl md:mt-6 shadow-[0_4px_24px_rgba(11,107,54,0.04)] border border-surface-variant">
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 bg-surface-variant rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A high-quality, studio-lit photograph of Amul Masti Dahi yogurt packaging on a pristine white background. The container is bright white with vivid blue and red branding elements. The lighting is soft and even, creating a clean, modern aesthetic suitable for a premium health app. Subtle reflections highlight the texture of the plastic cup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0357ztW9TANbflAbLU4fpRO0EyayWDGQSoAoMX7VnmG63uWRuhXWgW4KndKI8Jv2QHvTllD5gqSer0Kc3Wls5P0UK-AOeWrkJdX7I5eSU4K18HImCiYEX28SjGUwJn34ChK7k48t1-7Flid6ybJQZ962voSR7PhwDPi274_vxwLTdRz-EkvcAMTquyJMKNop5FVsvAgi_UusBaiwR_Zt57fRyPJTUx8Q0YrGf7IzXnPethvdBU0SQ"/>
+</div>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-primary tracking-wider uppercase mb-1">Amul</p>
+<h2 class="font-title-lg text-title-lg text-on-surface mb-2">Amul Masti Dahi</h2>
+<div class="flex items-center gap-2">
+<span class="bg-primary-container text-on-primary-container font-button text-button px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined fill-1 text-[18px]">verified</span>
+                            9.1
+                        </span>
+<span class="font-body-md text-body-md text-primary font-medium">Good Choice</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Tabs -->
+<nav class="flex border-b border-surface-variant overflow-x-auto hide-scrollbar bg-surface-container-lowest mt-2 md:rounded-xl">
+<button class="flex-1 py-4 px-4 text-center font-button text-button text-on-surface-variant hover:bg-surface-variant/50 transition-colors whitespace-nowrap">Overview</button>
+<button class="flex-1 py-4 px-4 text-center font-button text-button text-primary border-b-2 border-primary whitespace-nowrap bg-surface-variant/20">Ingredients</button>
+<button class="flex-1 py-4 px-4 text-center font-button text-button text-on-surface-variant hover:bg-surface-variant/50 transition-colors whitespace-nowrap">Nutrition</button>
+<button class="flex-1 py-4 px-4 text-center font-button text-button text-on-surface-variant hover:bg-surface-variant/50 transition-colors whitespace-nowrap">More</button>
+</nav>
+<div class="p-margin-mobile space-y-lg md:space-y-xl mt-4">
+<!-- Analysis Overview -->
+<section class="space-y-4">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Ingredient Analysis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Understand what's inside this product and how it impacts your health.</p>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-[0_4px_24px_rgba(11,107,54,0.04)]">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="font-headline-md text-headline-md text-on-surface">4</span>
+<span class="font-body-md text-body-md text-on-surface-variant"> Ingredients analyzed</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="h-3 w-full bg-surface-variant rounded-full overflow-hidden flex gap-0.5">
+<div class="h-full bg-primary" style="width: 75%"></div>
+<div class="h-full bg-amber-400" style="width: 25%"></div>
+</div>
+<!-- Legend -->
+<div class="flex gap-4 mt-4 pt-4 border-t border-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">3 Good</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-amber-400"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">1 Neutral</span>
+</div>
+<div class="flex items-center gap-2 opacity-50">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-surface-variant">0 Concern</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Personalized For You Card -->
+<section class="bg-primary-container/10 border border-primary/20 rounded-2xl p-4 flex gap-4 items-start">
+<div class="bg-primary-container text-on-primary-container p-2 rounded-full shrink-0">
+<span class="material-symbols-outlined fill-1">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-button text-button text-on-surface mb-1">For You</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">No major ingredient concerns identified based on your dietary profile. This product aligns with your health goals.</p>
+</div>
+</section>
+<!-- Allergen Info -->
+<section class="bg-error-container/20 border border-error/20 rounded-2xl p-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error">info</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider block mb-1">Allergen Information</span>
+<span class="font-button text-button text-on-surface">Contains: Milk</span>
+</div>
+</div>
+</section>
+<!-- Detailed Ingredient Cards -->
+<section class="space-y-4">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-4">Detailed Breakdown</h3>
+<!-- Ingredient 1: Milk -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-[0_4px_24px_rgba(11,107,54,0.04)] hover:shadow-[0_8px_32px_rgba(11,107,54,0.08)] hover:-translate-y-0.5 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<h4 class="font-button text-button text-on-surface text-lg">Milk</h4>
+</div>
+<span class="bg-primary/10 text-primary font-label-md text-label-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                            Good
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 mb-4">A natural source of high-quality protein, calcium, and essential vitamins vital for bone health and general wellbeing.</p>
+<button class="font-button text-button text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1">
+                        Learn More <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Ingredient 2: Milk Solids -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-[0_4px_24px_rgba(11,107,54,0.04)] hover:shadow-[0_8px_32px_rgba(11,107,54,0.08)] hover:-translate-y-0.5 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">blur_on</span>
+</div>
+<h4 class="font-button text-button text-on-surface text-lg">Milk Solids</h4>
+</div>
+<span class="bg-primary/10 text-primary font-label-md text-label-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                            Good
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 mb-4">Used to improve texture and nutritional profile, adding extra protein and thickness to the yogurt without artificial thickeners.</p>
+<button class="font-button text-button text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1">
+                        Learn More <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Ingredient 3: Live Cultures -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-[0_4px_24px_rgba(11,107,54,0.04)] hover:shadow-[0_8px_32px_rgba(11,107,54,0.08)] hover:-translate-y-0.5 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<h4 class="font-button text-button text-on-surface text-lg">Live Cultures</h4>
+</div>
+<span class="bg-primary/10 text-primary font-label-md text-label-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            Excellent
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 mb-4">Beneficial probiotics that aid in digestion, support gut health, and drive the natural fermentation process of the yogurt.</p>
+<button class="font-button text-button text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1">
+                        Learn More <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<!-- Ingredient 4: Sugar -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-2xl p-4 shadow-[0_4px_24px_rgba(11,107,54,0.04)] hover:shadow-[0_8px_32px_rgba(11,107,54,0.08)] hover:-translate-y-0.5 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-amber-400/10 rounded-full flex items-center justify-center text-amber-600">
+<span class="material-symbols-outlined">grain</span>
+</div>
+<h4 class="font-button text-button text-on-surface text-lg">Sugar (Naturally Occurring)</h4>
+</div>
+<span class="bg-amber-400/10 text-amber-700 font-label-md text-label-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">remove</span>
+                            Neutral
+                        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 mb-4">Contains naturally occurring lactose from milk. No added refined sugars are present, keeping the glycemic impact low.</p>
+<button class="font-button text-button text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-1">
+                        Learn More <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Footer Disclaimer -->
+<footer class="pt-8 pb-4 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant/70 max-w-sm mx-auto">
+                    Information provided is for educational purposes and should not replace professional medical advice. Always consult a healthcare provider for personalized dietary recommendations.
+                </p>
+</footer>
+</div>
+</main>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest border-t border-outline-variant shadow-sm rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined fill-1">barcode_scanner</span>
+<span class="font-label-md text-label-md mt-1">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md mt-1">Analysis</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-full active:scale-90 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

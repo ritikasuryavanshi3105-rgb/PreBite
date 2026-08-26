@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>PreBite - Product Comparison</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f3f0ef",
+                      "tertiary-fixed": "#d9e6dd",
+                      "on-surface": "#1b1b1b",
+                      "surface-tint": "#006d33",
+                      "on-tertiary-container": "#f5fff7",
+                      "secondary-container": "#9ff6b2",
+                      "inverse-primary": "#73dc8d",
+                      "secondary-fixed-dim": "#84d998",
+                      "outline": "#6e7a6e",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "background": "#fcf9f8",
+                      "tertiary-container": "#6b7770",
+                      "primary-fixed-dim": "#73dc8d",
+                      "surface-container-low": "#f6f3f2",
+                      "on-primary-fixed-variant": "#005225",
+                      "primary": "#006b32",
+                      "primary-fixed": "#8ff9a7",
+                      "on-secondary-container": "#19733d",
+                      "primary-container": "#0e8642",
+                      "on-primary-container": "#f7fff3",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container": "#f0eded",
+                      "on-surface-variant": "#3e4a3f",
+                      "surface": "#fcf9f8",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface-variant": "#e5e2e1",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#becabc",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "secondary": "#0f6d37",
+                      "on-secondary-fixed-variant": "#005227",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#00210b",
+                      "secondary-fixed": "#9ff6b2",
+                      "on-tertiary-fixed": "#131e19",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#535f58",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "on-background": "#1b1b1b",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-dim": "#dcd9d9",
+                      "inverse-surface": "#313030",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "unit": "4px",
+                      "margin-mobile": "16px",
+                      "gutter": "16px",
+                      "margin-desktop": "64px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "xl": "40px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Ambient shadows and tonal layers */
+        .shadow-soft-bloom {
+            box-shadow: 0 4px 20px rgba(11, 107, 54, 0.05);
+        }
+        .shadow-hover-lift {
+            transition: all 0.3s ease;
+        }
+        .shadow-hover-lift:hover {
+            box-shadow: 0 8px 30px rgba(11, 107, 54, 0.1);
+            transform: translateY(-2px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24 md:pb-0 flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky flex items-center justify-between px-margin-mobile h-16 w-full z-40 max-w-[1280px]">
+<div class="flex items-center gap-4">
+<button aria-label="Go back" class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Compare Products</h1>
+</div>
+<div class="flex gap-4">
+<button aria-label="Search" class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</header>
+<main class="w-full max-w-[1280px] px-margin-mobile pt-sm pb-xl flex-1 flex flex-col gap-lg">
+<!-- Intro -->
+<section class="flex flex-col gap-xs pt-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary">Compare Products</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">See which product is the better choice for you.</p>
+</section>
+<!-- Selected Products Bento Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-md">
+<!-- Product 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-md shadow-soft-bloom shadow-hover-lift flex flex-col gap-sm relative group">
+<button aria-label="Remove Product" class="absolute top-sm right-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full h-32 md:h-48 rounded-lg bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist product shot of Amul Masti Dahi yogurt container against a pure white background. The container is distinctly visible, lit by soft, bright, high-key studio lighting that creates a fresh, modern aesthetic. The color palette emphasizes clean whites and subtle natural tones, communicating clinical clarity and organic warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATA4jNzOiAvCe7h0tSWXrIMA0vPrGirESSp6ZCBZ2Zi6szEMyK4Xu_58KmXESdHMejSs5t-89xHmkuLhfPdmMI3fJPM5QrjnyJcavIv-17wcN_ykWBwoXhqI_rWu2TXuSzGrBgSz_3INCCjWT8rR2C2nijSpEyJA_NA4DMa_QYRUP7Pp4-XXUPJEtODUU7brurrygIhkcV2gL0KAWeuhFNe_taPisWZitunIUnTApq1z2qnCstUzhC"/>
+<div class="absolute bottom-2 left-2 bg-primary text-on-primary font-label-md text-label-md px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+                        9.1
+                    </div>
+</div>
+<div class="flex flex-col gap-unit">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Amul</p>
+<h3 class="font-title-lg text-title-lg text-on-surface line-clamp-2">Masti Dahi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">400g Cup</p>
+</div>
+<div class="mt-auto pt-sm flex gap-2 flex-wrap">
+<span class="bg-secondary-container text-on-secondary-container font-label-md text-label-md px-2 py-1 rounded-full">Excellent Choice</span>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-md shadow-soft-bloom shadow-hover-lift flex flex-col gap-sm relative group">
+<button aria-label="Remove Product" class="absolute top-sm right-sm text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+<div class="w-full h-32 md:h-48 rounded-lg bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist product shot of Mother Dairy Classic Curd container against a pure white background. The packaging is clearly visible, illuminated by soft, bright, high-key studio lighting that enhances the fresh, modern aesthetic. The palette focuses on pristine whites with natural organic hints, embodying clinical clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf5_hbE7NgtudvyCIG-I2w_flThXkuSRfYa0jJxaFSwK3WbHMo5bR7n_g4nUwVzEEsS5jjy9gsatfHDWkbjG8wsIs5fBHeCtiKlzrkyv1-8TI_RAdmkV94wgvaEAL-8so4XrxTR8QTmXXnk1OpWWFIMdCpspwxrq0pD3tv3vibqcQgP4JUxLYBnXoDgRk0a0IpToHkyQue63plE0feuJWcaZbp7XyHahbylb5HNZwConaa_3pgWqn5"/>
+<div class="absolute bottom-2 left-2 bg-secondary text-on-secondary font-label-md text-label-md px-2 py-1 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+                        8.8
+                    </div>
+</div>
+<div class="flex flex-col gap-unit">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Mother Dairy</p>
+<h3 class="font-title-lg text-title-lg text-on-surface line-clamp-2">Classic Curd</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">400g Cup</p>
+</div>
+<div class="mt-auto pt-sm flex gap-2 flex-wrap">
+<span class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-2 py-1 rounded-full">Great Choice</span>
+</div>
+</div>
+<!-- Add Product Slot (Hidden on small mobile, visible on tablet/desktop) -->
+<div class="hidden md:flex border-2 border-dashed border-outline-variant rounded-xl p-md flex-col items-center justify-center gap-sm text-on-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer min-h-[300px]">
+<span class="material-symbols-outlined text-4xl text-outline">add_circle</span>
+<p class="font-button text-button">Add Product</p>
+</div>
+</section>
+<!-- Best Choice Hero -->
+<section class="bg-secondary-container rounded-xl p-lg flex flex-col md:flex-row items-center gap-md shadow-soft-bloom relative overflow-hidden">
+<div class="absolute -top-10 -right-10 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="bg-primary text-on-primary rounded-full w-16 h-16 flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex flex-col z-10 w-full">
+<p class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider mb-unit">Best Choice For You</p>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Amul Masti Dahi</h3>
+<p class="font-body-md text-body-md text-on-secondary-container">With a higher PreBite score of 9.1 and slightly better protein-to-fat ratio, this is the optimal choice.</p>
+</div>
+</section>
+<!-- At a Glance Summary -->
+<section class="flex flex-col gap-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs">At a Glance</h3>
+<div class="bg-surface border border-outline-variant rounded-xl shadow-soft-bloom overflow-hidden">
+<!-- Header Row -->
+<div class="grid grid-cols-3 p-sm bg-surface-container-lowest border-b border-outline-variant items-center">
+<div class="col-span-1 font-label-md text-label-md text-on-surface-variant uppercase">Metric</div>
+<div class="col-span-1 font-label-md text-label-md text-on-surface text-center truncate px-1">Amul</div>
+<div class="col-span-1 font-label-md text-label-md text-on-surface text-center truncate px-1">Mother Dairy</div>
+</div>
+<!-- Score Row -->
+<div class="grid grid-cols-3 p-sm items-center border-b border-outline-variant bg-surface">
+<div class="col-span-1 font-body-md text-body-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm hidden sm:block">eco</span> Score
+                    </div>
+<div class="col-span-1 font-button text-button text-primary text-center bg-secondary-container/30 rounded py-1 mx-2">9.1</div>
+<div class="col-span-1 font-button text-button text-on-surface-variant text-center py-1">8.8</div>
+</div>
+<!-- Protein Row -->
+<div class="grid grid-cols-3 p-sm items-center border-b border-outline-variant bg-surface">
+<div class="col-span-1 font-body-md text-body-md text-on-surface">Protein</div>
+<div class="col-span-1 font-button text-button text-primary text-center bg-secondary-container/30 rounded py-1 mx-2">3.1g</div>
+<div class="col-span-1 font-button text-button text-on-surface-variant text-center py-1">3.0g</div>
+</div>
+<!-- Sugar Row -->
+<div class="grid grid-cols-3 p-sm items-center border-b border-outline-variant bg-surface">
+<div class="col-span-1 font-body-md text-body-md text-on-surface">Added Sugar</div>
+<div class="col-span-1 font-body-md text-body-md text-on-surface-variant text-center py-1">0g</div>
+<div class="col-span-1 font-body-md text-body-md text-on-surface-variant text-center py-1">0g</div>
+</div>
+<!-- Fat Row -->
+<div class="grid grid-cols-3 p-sm items-center border-b border-outline-variant bg-surface">
+<div class="col-span-1 font-body-md text-body-md text-on-surface">Total Fat</div>
+<div class="col-span-1 font-button text-button text-primary text-center bg-secondary-container/30 rounded py-1 mx-2">3.0g</div>
+<div class="col-span-1 font-button text-button text-on-surface-variant text-center py-1">3.5g</div>
+</div>
+</div>
+</section>
+<!-- Detailed Comparison Table (Scrollable on mobile) -->
+<section class="flex flex-col gap-sm">
+<div class="flex justify-between items-end mb-xs">
+<h3 class="font-title-lg text-title-lg text-on-surface">Detailed Nutrition</h3>
+<button class="font-label-md text-label-md text-primary hover:underline">Per 100g</button>
+</div>
+<div class="w-full overflow-x-auto hide-scrollbar rounded-xl border border-outline-variant shadow-soft-bloom bg-surface">
+<table class="w-full min-w-[500px] text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest border-b border-outline-variant">
+<th class="p-md font-label-md text-label-md text-on-surface-variant uppercase font-medium w-2/4">Nutrient</th>
+<th class="p-md font-label-md text-label-md text-on-surface uppercase font-medium w-1/4 text-center">Amul</th>
+<th class="p-md font-label-md text-label-md text-on-surface uppercase font-medium w-1/4 text-center">Mother Dairy</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm">Calories</td>
+<td class="p-md py-sm text-center">61 kcal</td>
+<td class="p-md py-sm text-center text-on-surface-variant">65 kcal</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm pl-8 text-on-surface-variant">Protein</td>
+<td class="p-md py-sm text-center text-primary font-medium">3.1 g</td>
+<td class="p-md py-sm text-center">3.0 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm">Carbohydrates</td>
+<td class="p-md py-sm text-center">4.5 g</td>
+<td class="p-md py-sm text-center text-on-surface-variant">4.8 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm pl-8 text-on-surface-variant">Total Sugars</td>
+<td class="p-md py-sm text-center">4.5 g</td>
+<td class="p-md py-sm text-center text-on-surface-variant">4.8 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest/50">
+<td class="p-md py-sm pl-12 text-on-surface-variant text-sm">Added Sugars</td>
+<td class="p-md py-sm text-center text-sm">0 g</td>
+<td class="p-md py-sm text-center text-sm">0 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm">Total Fat</td>
+<td class="p-md py-sm text-center text-primary font-medium">3.0 g</td>
+<td class="p-md py-sm text-center text-on-surface-variant">3.5 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors bg-surface-container-lowest/50">
+<td class="p-md py-sm pl-8 text-on-surface-variant text-sm">Saturated Fat</td>
+<td class="p-md py-sm text-center text-sm">2.0 g</td>
+<td class="p-md py-sm text-center text-sm">2.3 g</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm">Sodium</td>
+<td class="p-md py-sm text-center text-primary font-medium">45 mg</td>
+<td class="p-md py-sm text-center text-on-surface-variant">50 mg</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-md py-sm">Calcium</td>
+<td class="p-md py-sm text-center">120 mg</td>
+<td class="p-md py-sm text-center">120 mg</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Verdict & Actions -->
+<section class="bg-surface border border-outline-variant rounded-xl p-lg shadow-soft-bloom flex flex-col gap-md mt-sm">
+<h3 class="font-title-lg text-title-lg text-on-surface text-center">Our Recommendation</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant text-center max-w-2xl mx-auto">
+                Both products offer a simple, clean ingredient profile consisting solely of pasteurized milk and active cultures. <strong>Amul Masti Dahi</strong> edges out as the better option due to slightly lower total fat and sodium content, resulting in a superior PreBite score.
+            </p>
+<div class="flex flex-col sm:flex-row gap-sm justify-center mt-sm">
+<button class="bg-primary text-on-primary font-button text-button rounded-xl px-lg py-sm flex items-center justify-center gap-2 hover:bg-on-primary-fixed-variant transition-colors shadow-sm">
+                    View Amul Details
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="bg-secondary-container text-primary font-button text-button rounded-xl px-lg py-sm flex items-center justify-center gap-2 hover:bg-tertiary-fixed transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+                    Add to Favorites
+                </button>
+</div>
+</section>
+<!-- Spacer for mobile nav -->
+<div class="h-8 md:hidden"></div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant dark:border-outline shadow-sm rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">barcode_scanner</span>
+<span class="font-label-md text-label-md">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md">Analysis</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl mb-1">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

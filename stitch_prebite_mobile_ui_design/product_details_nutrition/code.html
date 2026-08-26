@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details - Nutrition</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#9ff6b2",
+                        "surface-tint": "#006d33",
+                        "primary-fixed": "#8ff9a7",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210b",
+                        "tertiary": "#535f58",
+                        "outline-variant": "#becabc",
+                        "tertiary-fixed-dim": "#bdcac1",
+                        "inverse-surface": "#313030",
+                        "tertiary-container": "#6b7770",
+                        "on-surface": "#1b1b1b",
+                        "surface-container-high": "#eae7e7",
+                        "on-surface-variant": "#3e4a3f",
+                        "surface-bright": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#005227",
+                        "tertiary-fixed": "#d9e6dd",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#006b32",
+                        "inverse-primary": "#73dc8d",
+                        "primary-fixed-dim": "#73dc8d",
+                        "primary-container": "#0e8642",
+                        "secondary": "#0f6d37",
+                        "outline": "#6e7a6e",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed-dim": "#84d998",
+                        "surface": "#fcf9f8",
+                        "on-primary-container": "#f7fff3",
+                        "secondary-container": "#9ff6b2",
+                        "on-background": "#1b1b1b",
+                        "on-tertiary-fixed-variant": "#3e4943",
+                        "on-primary-fixed-variant": "#005225",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-secondary-container": "#19733d",
+                        "on-secondary-fixed": "#00210c",
+                        "on-tertiary-fixed": "#131e19",
+                        "on-tertiary-container": "#f5fff7",
+                        "on-error": "#ffffff",
+                        "background": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "gutter": "16px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1b1b1b;
+        }
+        .soft-bloom-shadow {
+            box-shadow: 0 4px 24px -4px rgba(11, 107, 54, 0.05), 0 0 1px 0 rgba(11, 107, 54, 0.1);
+        }
+        .soft-bloom-shadow-hover:hover {
+            box-shadow: 0 8px 32px -4px rgba(11, 107, 54, 0.08), 0 0 1px 0 rgba(11, 107, 54, 0.1);
+            transform: translateY(-2px);
+            transition: all 0.2s ease-out;
+        }
+        
+        /* Hide scrollbar for tabs but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased font-body-lg flex flex-col min-h-screen max-w-[1280px] mx-auto bg-background">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim w-full top-0 sticky z-50 flex items-center justify-between px-margin-mobile h-16 border-b border-surface-variant">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-title-lg font-title-lg text-primary dark:text-primary-fixed">Product Details</h1>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-lg pb-32 gap-lg max-w-3xl mx-auto w-full">
+<!-- Product Summary (Top Section) -->
+<section class="flex gap-md items-start p-md bg-surface-container-lowest rounded-xl border border-surface-variant soft-bloom-shadow">
+<div class="w-24 h-24 rounded-lg bg-surface-container-lowest border border-surface-variant flex-shrink-0 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain p-2" data-alt="A clean, minimalist product shot of a tub of Amul Masti Dahi against a pure white background. The image is brightly lit with soft, diffused studio lighting, highlighting the vibrant red and blue branding on the white tub. The aesthetic is clinical yet fresh, fitting a modern health app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMEqMj-xHfI3I29KxvUvp26czKj8mz8h_B3h7xP3968jdOMDKGWBGiVP9hH-3ehglJbUhRGBekN1xWAICjxfQQnM5HSb-2oTB95rV5TE5Eda30w3zCoIZzZRVscyrTvN6blaja9YeTv1d7eyIqtGjHHpoNT0Qm0yeOBQrpl3ruDY7djytZFikw7AJVgtOH48AQF9gbCdgQBcTgtBy1Y1jHM1RVkfVVCiMuNJlBPh0-x9QIUC9kj2A5"/>
+</div>
+<div class="flex flex-col gap-xs flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Amul</span>
+<h2 class="font-title-lg text-title-lg text-on-surface">Amul Masti Dahi</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">400g</span>
+</div>
+</div>
+<div class="flex items-center gap-md mt-sm">
+<div class="flex items-center gap-xs bg-secondary-fixed text-on-primary-fixed-variant px-sm py-1 rounded-full border border-secondary-fixed-dim">
+<span class="material-symbols-outlined text-[16px] fill" data-icon="verified">verified</span>
+<span class="font-label-md text-label-md font-bold">9.1 / 10</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-medium">Good Choice</span>
+</div>
+</div>
+</section>
+<!-- Tabs -->
+<nav class="flex border-b border-surface-variant w-full overflow-x-auto no-scrollbar">
+<a class="px-md py-sm font-button text-button text-on-surface-variant whitespace-nowrap hover:bg-surface-variant/50 transition-colors" href="#">Overview</a>
+<a class="px-md py-sm font-button text-button text-on-surface-variant whitespace-nowrap hover:bg-surface-variant/50 transition-colors" href="#">Ingredients</a>
+<a class="px-md py-sm font-button text-button text-primary border-b-2 border-primary whitespace-nowrap" href="#">Nutrition</a>
+<a class="px-md py-sm font-button text-button text-on-surface-variant whitespace-nowrap hover:bg-surface-variant/50 transition-colors" href="#">More</a>
+</nav>
+<!-- Nutrition Header -->
+<section class="flex flex-col gap-xs mt-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Nutrition Information</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">See the nutritional values that contribute to the PreBite score.</p>
+</section>
+<!-- Serving Toggle -->
+<div class="bg-surface-variant p-1 rounded-lg flex w-full max-w-[400px] mx-auto md:mx-0">
+<button class="flex-1 py-2 font-label-md text-label-md bg-surface text-primary font-bold rounded shadow-sm">Per 100 g</button>
+<button class="flex-1 py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors">Per Serving (200g)</button>
+</div>
+<!-- Nutrition Score Card (In Nutrition Tab Context) -->
+<div class="bg-secondary-fixed/20 border border-secondary-fixed-dim rounded-xl p-md flex items-center justify-between">
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant uppercase tracking-widest">Nutrition Score</span>
+<span class="font-headline-md text-headline-md text-primary">9.0 <span class="font-title-lg text-title-lg text-primary-fixed-dim">/ 10</span></span>
+</div>
+<div class="bg-surface rounded-full px-md py-sm border border-secondary-fixed-dim shadow-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary fill" data-icon="check_circle">check_circle</span>
+<span class="font-button text-button text-primary">Excellent</span>
+</div>
+</div>
+<!-- Nutrition Table -->
+<section class="bg-surface-container-lowest rounded-xl border border-surface-variant overflow-hidden soft-bloom-shadow">
+<div class="flex flex-col">
+<!-- Energy -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface font-medium">Energy</span>
+<span class="font-body-md text-body-md text-on-surface">61 kcal</span>
+</div>
+<!-- Protein -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant bg-surface-bright">
+<div class="flex items-center gap-sm">
+<span class="font-body-md text-body-md text-on-surface font-medium">Protein</span>
+<span class="bg-secondary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Good</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">3.1 g</span>
+</div>
+<!-- Total Sugar -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface font-medium">Total Sugar</span>
+<span class="font-body-md text-body-md text-on-surface">4.5 g</span>
+</div>
+<!-- Added Sugar -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant pl-xl bg-surface-bright">
+<div class="flex items-center gap-sm">
+<span class="font-body-md text-body-md text-on-surface-variant">Added Sugar</span>
+<span class="bg-secondary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Excellent</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">0 g</span>
+</div>
+<!-- Total Fat -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant">
+<span class="font-body-md text-body-md text-on-surface font-medium">Total Fat</span>
+<span class="font-body-md text-body-md text-on-surface">3.0 g</span>
+</div>
+<!-- Sodium -->
+<div class="flex justify-between items-center p-md border-b border-surface-variant bg-surface-bright">
+<div class="flex items-center gap-sm">
+<span class="font-body-md text-body-md text-on-surface font-medium">Sodium</span>
+<span class="bg-secondary-fixed text-on-primary-fixed-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Low</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">45 mg</span>
+</div>
+<!-- Calcium -->
+<div class="flex justify-between items-center p-md">
+<span class="font-body-md text-body-md text-on-surface font-medium">Calcium</span>
+<span class="font-body-md text-body-md text-on-surface">120 mg</span>
+</div>
+</div>
+</section>
+<!-- Nutrition Highlights -->
+<section class="flex flex-col gap-md">
+<h4 class="font-title-lg text-title-lg text-on-surface">Nutrition Highlights</h4>
+<div class="grid grid-cols-2 gap-sm">
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-sm flex items-center gap-sm soft-bloom-shadow-hover cursor-default">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/30 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="water_drop">water_drop</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Low Added Sugar</span>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-sm flex items-center gap-sm soft-bloom-shadow-hover cursor-default">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/30 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="fitness_center">fitness_center</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Good Protein</span>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-sm flex items-center gap-sm soft-bloom-shadow-hover cursor-default">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant" data-icon="balance">balance</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Moderate Fat</span>
+</div>
+<div class="bg-surface-container-lowest border border-surface-variant rounded-lg p-sm flex items-center gap-sm soft-bloom-shadow-hover cursor-default">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/30 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="bone">format_h4</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface leading-tight">Source of Calcium</span>
+</div>
+</div>
+</section>
+<!-- Personalized Card -->
+<section class="bg-on-tertiary-container border border-surface-variant rounded-xl p-md flex gap-md items-start soft-bloom-shadow">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-on-primary" data-icon="person_check">person_check</span>
+</div>
+<div class="flex flex-col gap-xs">
+<h4 class="font-button text-button text-primary">What This Means For You</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">This product fits well with your preferences for high protein and low added sugar. It's a great choice for your daily dairy intake.</p>
+</div>
+</section>
+</main>
+<!-- Footer Actions (Fixed Bottom on Mobile, Flow on Desktop if needed, but fixed usually better for Pdp) -->
+<footer class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-surface-variant px-margin-mobile py-md flex flex-col gap-sm z-40 max-w-[1280px] mx-auto left-1/2 -translate-x-1/2">
+<div class="flex gap-md">
+<button class="flex-1 bg-surface border border-outline text-primary font-button text-button py-3 rounded-lg flex items-center justify-center gap-sm hover:bg-surface-variant transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="compare_arrows">compare_arrows</span>
+                Add to Compare
+            </button>
+<button class="flex-1 bg-primary text-on-primary font-button text-button py-3 rounded-lg flex items-center justify-center gap-sm hover:bg-primary-container transition-colors active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                Add to Favorites
+            </button>
+</div>
+<p class="font-label-md text-[10px] text-center text-on-surface-variant/70 mt-xs px-md">
+            The PreBite score and nutrition analysis are for informational purposes only and do not constitute medical advice. Consult a healthcare professional for personalized dietary recommendations.
+        </p>
+</footer>
+</body></html>

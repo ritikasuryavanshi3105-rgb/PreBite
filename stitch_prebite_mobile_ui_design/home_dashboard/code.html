@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PreBite - Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#fcf9f8",
+                      "surface-container-low": "#f6f3f2",
+                      "inverse-on-surface": "#f3f0ef",
+                      "primary-fixed-dim": "#73dc8d",
+                      "surface-dim": "#dcd9d9",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1b1b1b",
+                      "on-surface": "#1b1b1b",
+                      "surface-container": "#f0eded",
+                      "secondary-fixed-dim": "#84d998",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-primary-fixed": "#00210b",
+                      "on-primary-container": "#f7fff3",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "secondary": "#0f6d37",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#eae7e7",
+                      "inverse-surface": "#313030",
+                      "secondary-fixed": "#9ff6b2",
+                      "on-secondary-fixed-variant": "#005227",
+                      "on-surface-variant": "#3e4a3f",
+                      "primary-fixed": "#8ff9a7",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#006b32",
+                      "surface-bright": "#fcf9f8",
+                      "on-secondary-fixed": "#00210c",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "background": "#fcf9f8",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#006d33",
+                      "primary-container": "#0e8642",
+                      "inverse-primary": "#73dc8d",
+                      "outline-variant": "#becabc",
+                      "on-tertiary-fixed": "#131e19",
+                      "tertiary": "#535f58",
+                      "on-secondary-container": "#19733d",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#f5fff7",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#9ff6b2",
+                      "tertiary-fixed": "#d9e6dd",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#6b7770",
+                      "surface-variant": "#e5e2e1",
+                      "on-primary-fixed-variant": "#005225",
+                      "outline": "#6e7a6e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "margin-mobile": "16px",
+                      "xl": "40px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "gutter": "16px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "button": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "button": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .shadow-soft {
+                box-shadow: 0 4px 20px rgba(11, 107, 54, 0.05);
+            }
+            .shadow-hover {
+                box-shadow: 0 8px 32px rgba(11, 107, 54, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-lg min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-margin-mobile h-16 w-full bg-surface w-full top-0 sticky z-40 hidden md:flex">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">PreBite</span>
+</div>
+</div>
+<nav class="flex gap-8">
+<a class="text-primary font-label-md text-label-md font-bold hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                Home
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">barcode_scanner</span>
+                Scan
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                Analysis
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+<span class="material-symbols-outlined">person</span>
+                Profile
+            </a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Notifications" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="Profile" class="w-8 h-8 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="A small circular avatar image showing a professionally lit, smiling young woman against a clean, light-mode background, fitting seamlessly into a modern tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa4ZCTaGzBxbe54N3eLZieBKOxbddQl3sqHJegM5ErjW3e5k3recA6dL0yRm7A1q9MBRnJg5itiMMcAomBZpUpyuyFeoXuVB1eZceUjvrcogWeKu7WiGslhaq9s8ssixqKzXUJt5yjW7pYXi_Ys-bD0h00GafH0HqPeQ2aPeR9dyeBknKnHkYdsmEqOJGPmeCnsroFbcmd-fJr1vOXrgeAB3-u1xqKzJm8CMi707BaOw5z7tsShw5V"/>
+</button>
+</div>
+</header>
+<!-- Mobile Header (Alternative to TopAppBar for Mobile specific requirements in prompt) -->
+<div class="md:hidden flex items-center justify-between px-margin-mobile h-16 w-full bg-surface top-0 sticky z-40">
+<button aria-label="Menu" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<img alt="PreBite Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsgU3QtpYefRHpXH3j3mRlp0kwYfcTKGfgpgR-JR5rJjJPvm2ut7fiOvWtjj7DdQDUgH5E0OQKpouYYtvISyHW1vZIGpVwKq41u3Bxb04rMi7k49_y77HcUFoJFU6v2rvEJMhh1y3L-eS4g69h-knEJ-RFT2UIRWyGIbrJ5GA01zAGuU6asGkXhXOF4ge_rnBGLVIy123OUtWzvcNlWIBmgBJlsdrW9hqmu5F8PRj5OTjxqnZ9uIxrXmA"/>
+<div class="flex items-center gap-4">
+<button aria-label="Notifications" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button aria-label="Profile" class="w-8 h-8 rounded-full overflow-hidden hover:opacity-80 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="A small circular avatar image showing a professionally lit, smiling young woman against a clean, light-mode background, fitting seamlessly into a modern tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDTdCPo1ISUmpQiZBfB53PkeTZoHR7cxYMo_MheUyqk5-QrEWhebqBlLtGq7a2IZtILlxtGeVN2Bh4i11v3Fz1XJ-cJ7-L4VYflmjZfe9yFAu9HoxLgGf8LqgQ89sYmkHv4H7w6Dg3ei-qOtqTIZDfcHHGis5tX3CH17LfaFF_icS-nmaJsHOCSzxWkfI__GXKFQphl1LbT6ne-L_YNiN-3oZqxpRnhMhXAEu1Y6vg3nj_0kbJidfc"/>
+</button>
+</div>
+</div>
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-lg space-y-lg">
+<!-- Greeting -->
+<section>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">Good Morning, Riya!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Ready to make a healthier choice today?</p>
+</section>
+<!-- Search -->
+<section>
+<div class="relative w-full max-w-2xl">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-lowest border border-outline-variant rounded-full font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all shadow-soft" placeholder="Search products, brands or ingredients" type="text"/>
+</div>
+</section>
+<!-- Primary Scan Card -->
+<section>
+<div class="bg-primary text-on-primary rounded-[24px] p-lg md:p-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-lg shadow-soft hover:shadow-hover transition-shadow">
+<div class="z-10 flex-1">
+<h2 class="font-headline-md text-headline-md mb-sm">Know Before You Bite</h2>
+<p class="font-body-md text-body-md text-on-primary/90 mb-lg max-w-sm">Scan a product barcode to instantly understand what's inside.</p>
+<button class="bg-surface-container-lowest text-primary font-button text-button px-6 py-3 rounded-xl hover:bg-surface-variant active:scale-95 transition-all flex items-center gap-2 w-fit">
+<span class="material-symbols-outlined">barcode_scanner</span>
+                        Scan Barcode
+                    </button>
+</div>
+<div class="z-10 opacity-20 hidden md:block">
+<span class="material-symbols-outlined text-[120px]">qr_code_scanner</span>
+</div>
+<!-- Decorative pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+</div>
+</section>
+<!-- Quick Actions Bento Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-lg">
+<button class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center gap-sm shadow-soft hover:shadow-hover hover:-translate-y-1 active:scale-95 transition-all group">
+<div class="w-12 h-12 rounded-full bg-secondary-container/50 flex items-center justify-center text-on-secondary-container group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">barcode_scanner</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Scan<br/>Barcode</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center gap-sm shadow-soft hover:shadow-hover hover:-translate-y-1 active:scale-95 transition-all group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">compare_arrows</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Compare<br/>Products</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center gap-sm shadow-soft hover:shadow-hover hover:-translate-y-1 active:scale-95 transition-all group">
+<div class="w-12 h-12 rounded-full bg-error-container/50 flex items-center justify-center text-error group-hover:bg-error-container transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">My<br/>Favorites</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col items-center justify-center gap-sm shadow-soft hover:shadow-hover hover:-translate-y-1 active:scale-95 transition-all group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant group-hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface text-center">Scan<br/>History</span>
+</button>
+</section>
+<!-- Top Picks -->
+<section class="space-y-md">
+<div class="flex items-center justify-between">
+<h3 class="font-title-lg text-title-lg text-on-surface">Top Picks For You</h3>
+<button class="text-primary font-label-md text-label-md hover:underline">View All</button>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-lg pb-4 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 snap-x">
+<!-- Product Card 1 -->
+<div class="min-w-[240px] md:min-w-[280px] bg-surface-container-lowest border border-outline-variant rounded-[16px] overflow-hidden shadow-soft hover:shadow-hover transition-shadow flex-shrink-0 snap-center cursor-pointer group">
+<div class="h-32 bg-surface-variant relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professional product shot of Amul Masti Dahi yogurt container, 400g. Bright, high-key lighting against a pure white background. The image feels clinical and trustworthy, aligning with a modern health app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5VicUTzuGPmHTPt2pyhD6dnq56jmNEzG2ollYq0aH5TXdCsM_sR4icqHXNxAGt9yUqBNevEYUt-5OoR9NMY4Q69AKVFVgCCdYUJ-KMCVyDQtqHGpzpGGP6AXGreF5qy3Bc-D5-XYYt2uvCNl3ivEwl2hz9pIFAWYo3tmR4azyITRyBD3Kpa_vIqDXV_hC5BP018IefOZhs0QYf9tTJWnKiV5IN8GSSx_QaouMe6g7FT0Cxj3RpNSK"/>
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-md text-label-md px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            9.1
+                        </div>
+</div>
+<div class="p-md space-y-2">
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight truncate">Amul Masti Dahi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">400g</p>
+<div class="pt-2 border-t border-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md text-secondary">Good Choice</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[240px] md:min-w-[280px] bg-surface-container-lowest border border-outline-variant rounded-[16px] overflow-hidden shadow-soft hover:shadow-hover transition-shadow flex-shrink-0 snap-center cursor-pointer group">
+<div class="h-32 bg-surface-variant relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professional product shot of Mother Dairy plain yogurt container, 400g. Bright, high-key lighting against a pure white background. The image feels clinical and trustworthy, aligning with a modern health app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ9TFz67fUjzPCpKbaA1uuLqY_lwnoimnMhTr0ir3EXZSBxtEDAZZsRfKt8i55_FgNyfZtTH-voIdqen7TFHh-GQHzFOTu7Vm_Onl18EtdocD1sBkVI6RBpTx0BUO-rbwnriJwnbTmIFo69DPqP-6QaFYnEgOcSldi_zGpOVvYgau9LH3-d13GcMzZYOJUBRl4A4CQcBomDYQWvJ1bS9iWLHoQlvXaZtNWYmtsa0zGsKRh55T88UIN"/>
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-md text-label-md px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            8.4
+                        </div>
+</div>
+<div class="p-md space-y-2">
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight truncate">Mother Dairy Dahi</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">400g</p>
+<div class="pt-2 border-t border-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md text-secondary">Good Choice</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[240px] md:min-w-[280px] bg-surface-container-lowest border border-outline-variant rounded-[16px] overflow-hidden shadow-soft hover:shadow-hover transition-shadow flex-shrink-0 snap-center cursor-pointer group">
+<div class="h-32 bg-surface-variant relative">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A clean, professional product shot of Quaker Oats packaging, 500g. Bright, high-key lighting against a pure white background. The image feels clinical and trustworthy, aligning with a modern health app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7bhvjRmGl40U73RA_8nuVFcVzJgY7_2xBmvkzF8bG99ssjDxSrv_G6C3NXgTFPZS3X6AxIEw-LTemKVlueNv7HZABCp7qu-EEvy340gSqyiGws0MuYAQLzE5QEuKring-g0TiqzOsNR8HXCtbKHdpwn7bfNXoU8r4jSjoSSvxiMV23DQL3OgIeTCDz0E6iWNH-qdmgNpszFc_1vzcgoLfNsB2eR0SEl397YK5U0KNEnofr4M5a2ww"/>
+<div class="absolute top-2 right-2 bg-secondary text-on-secondary font-label-md text-label-md px-2 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">star</span>
+                            8.2
+                        </div>
+</div>
+<div class="p-md space-y-2">
+<h4 class="font-title-lg text-title-lg text-on-surface leading-tight truncate">Quaker Oats</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">500g</p>
+<div class="pt-2 border-t border-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md text-secondary">Good Choice</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Health Insight Card -->
+<section>
+<div class="bg-secondary-container/30 border border-secondary-container rounded-xl p-md flex items-start gap-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined">psychiatry</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface pt-1">
+                    Choose products with less added sugar and more protein to support healthier everyday choices.
+                </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest border-t border-outline-variant shadow-sm md:hidden rounded-t-xl">
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined">barcode_scanner</span>
+<span class="font-label-md text-label-md mt-1">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md mt-1">Analysis</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors rounded-xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

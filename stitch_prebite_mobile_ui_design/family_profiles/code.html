@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Family Profiles - PreBite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f6f3f2",
+                      "secondary-fixed": "#9ff6b2",
+                      "on-surface": "#1b1b1b",
+                      "surface-container-high": "#eae7e7",
+                      "on-secondary-fixed-variant": "#005227",
+                      "surface-dim": "#dcd9d9",
+                      "on-background": "#1b1b1b",
+                      "on-tertiary-container": "#f5fff7",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "primary-fixed": "#8ff9a7",
+                      "inverse-primary": "#73dc8d",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#00210b",
+                      "secondary-fixed-dim": "#84d998",
+                      "primary-container": "#0e8642",
+                      "surface-bright": "#fcf9f8",
+                      "primary": "#006b32",
+                      "on-secondary": "#ffffff",
+                      "outline": "#6e7a6e",
+                      "surface-container": "#f0eded",
+                      "on-tertiary-fixed": "#131e19",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "background": "#fcf9f8",
+                      "surface": "#fcf9f8",
+                      "on-primary": "#ffffff",
+                      "on-primary-container": "#f7fff3",
+                      "secondary": "#0f6d37",
+                      "on-surface-variant": "#3e4a3f",
+                      "inverse-on-surface": "#f3f0ef",
+                      "inverse-surface": "#313030",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-secondary-fixed": "#00210c",
+                      "on-primary-fixed-variant": "#005225",
+                      "secondary-container": "#9ff6b2",
+                      "primary-fixed-dim": "#73dc8d",
+                      "surface-variant": "#e5e2e1",
+                      "surface-tint": "#006d33",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-container": "#19733d",
+                      "tertiary-container": "#6b7770",
+                      "tertiary": "#535f58",
+                      "tertiary-fixed": "#d9e6dd",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#becabc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "xl": "40px",
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "sm": "8px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased pb-24 max-w-[390px] mx-auto min-h-screen relative shadow-2xl">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface-dim z-40">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">Family Profiles</h1>
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+</button>
+</div>
+</header>
+<main class="px-margin-mobile py-lg flex flex-col gap-lg">
+<!-- Introduction -->
+<section class="flex flex-col gap-sm">
+<h2 class="font-title-lg text-title-lg text-on-surface">Who's making the choice?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select a family member to get personalized food recommendations and insights.</p>
+</section>
+<!-- Active Profile (Riya) -->
+<section>
+<div class="bg-surface rounded-xl border border-primary p-md flex items-center justify-between shadow-[0_4px_16px_rgba(11,107,54,0.1)] relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary-container/10 pointer-events-none"></div>
+<div class="flex items-center gap-md relative z-10">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="A smiling, warm portrait of a young professional woman (Riya) against a soft, bright, high-key light background, in a modern, fresh clinical tech style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyBshtc6W_JwK3a0GwG50ONNAw2fpvVLyesSCwxjNDvnhuJQNerq9QI4W7YwvSGCBnJuwtbN2PNAYq3Z9NG9NncjU8XK4Wg1n041R4s8uKlUprkdOKMcNzsMfFRFHkMghMa6BQKDxA-05pEem3D4EA8oZ3FAzL_EHrvGMfhDrW-bjM98k9k0sdPZ8r-nd3v7Bu1iG1_YGun924O2D8OQ81gyAJ20ctkRcbrZ7PKhvxD6nI4zOPoIXR"/>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="font-button text-button text-on-surface">Riya</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-label-md text-label-md">Active</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Balanced Nutrition, Low Added Sugar</p>
+</div>
+</div>
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+</section>
+<!-- Family List -->
+<section class="flex flex-col gap-sm">
+<!-- Mom -->
+<div class="bg-surface rounded-xl border border-outline-variant p-md flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform cursor-pointer hover:shadow-md">
+<div class="flex items-center gap-md">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-outline-variant bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="A warm, approachable portrait of an older woman (Mom) with a gentle smile, bright natural lighting, soft white background, modern health tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_bqyw9gmjv7ghbCkDzrHuJiNjWJN-S2VNPU7HnL5vflm_kadRndM88VM71oihqdpETtPHDfPrB9qmsu_x7Q9JcMPscXgdvd1BejjJRW9Kek7_8_rvkPrkd-rnX0paHxzdzOwnkBH3-Dq5hHlCnVLX78EnmDSlktAEd17uk9Jsl6T-JgUQkkld9dr-aMo9Jumnh_BxWKX_oEAfRg1M1NT2XhIx5bVjLkYtE2Jncdh4ewFnHROMOnK7"/>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-button text-button text-on-surface">Mom</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Heart Healthy, Low Sodium</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+<!-- Dad -->
+<div class="bg-surface rounded-xl border border-outline-variant p-md flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform cursor-pointer hover:shadow-md">
+<div class="flex items-center gap-md">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-outline-variant bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of a middle-aged man (Dad) looking relaxed and healthy, soft studio lighting, clean white background, modern organic tech style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIK6uh9EvyHKACRfrRgkdDHbKrTPz-Q5J6txrlYDrCHVb2uiI0Jxxz0O_i2TaYlrSxCyH-mEVGUdIuNzWsZkQS6n0w9Rkplruez2XcekWNPBrVwTyIa2BudNx93P4xuoOoVc92-_lfZMpHBXCboNCQfqQRXXp_c-6BQWBlPJfVP46BM3F_56HwlXXasSmTlFXsYF3CCEIYNvG2MvakOldUFIyTQbFTJfzY0UQijhfHT5ImC_YBPap7"/>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-button text-button text-on-surface">Dad</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">High Protein, Balanced Nutrition</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+<!-- Aarav -->
+<div class="bg-surface rounded-xl border border-outline-variant p-md flex items-center justify-between shadow-sm active:scale-[0.98] transition-transform cursor-pointer hover:shadow-md">
+<div class="flex items-center gap-md">
+<div class="w-14 h-14 rounded-full overflow-hidden border border-outline-variant bg-surface-container-high shrink-0">
+<img class="w-full h-full object-cover" data-alt="A cheerful portrait of a young boy (Aarav), bright and airy lighting, soft neutral background, conveying health and vitality in a modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEQ1MghwS6JcK5hD50nIppsrvPMPM-ktk6ssmWL4ZAqIOseOFu-VHXPi_qKgTa_cZBoMXSPqClNE3gyhYmkOWnTJnv3qFh8Wse0GT05PRGkDNNN5lgENU35ALm8u7oaohfqvFWIs9i_Z3pG5gwUY7tRprl9iUNcOX8qnMOz57We8ocmqH8qJ51RDNeagIoxLVfj53ZitG0g-PqPBsRUmzcKe23HZsZ0u5L92jI7Ds_JRg2D07HIvVH"/>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-button text-button text-on-surface">Aarav (Child)</span>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Kids Friendly, Balanced Nutrition</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+</section>
+<!-- Add Member Action -->
+<button class="w-full border-2 border-outline-variant border-dashed rounded-xl p-md flex flex-col items-center justify-center gap-sm hover:border-primary transition-colors active:scale-[0.98] bg-surface-container-lowest">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 0;">person_add</span>
+</div>
+<span class="font-button text-button text-primary">Add Family Member</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-center max-w-[250px]">Create a profile with personalized food preferences.</p>
+</button>
+<!-- Preferences Summary (Riya) -->
+<section class="bg-surface rounded-xl border border-outline-variant p-md shadow-[0_4px_16px_rgba(11,107,54,0.05)] flex flex-col gap-md">
+<h3 class="font-title-lg text-title-lg text-on-surface">Selected Profile Preferences</h3>
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Food Goals</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md border border-secondary-fixed">Balanced Nutrition</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md border border-secondary-fixed">Weight Maintenance</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sugar Preference</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1.5 rounded-full font-label-md text-label-md border border-secondary-fixed">Low Added Sugar</span>
+</div>
+</div>
+<button class="w-full mt-2 border border-primary text-primary rounded-xl py-3 px-4 font-button text-button flex items-center justify-center gap-2 hover:bg-secondary-container/20 transition-colors active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">edit</span>
+                Edit Profile
+            </button>
+</section>
+<!-- Info Card -->
+<section class="bg-secondary-container/30 rounded-xl border border-secondary-fixed-dim p-md flex gap-md items-start">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="flex flex-col gap-xs">
+<h4 class="font-button text-button text-on-surface">Personalized Recommendations</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">When you scan items, we'll highlight insights specific to Riya's dietary goals and label preferences.</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-surface-container-lowest dark:bg-surface-container-low shadow-[0_-4px_16px_rgba(0,0,0,0.05)] rounded-t-xl border-t border-outline-variant/30">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-lg">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-lg">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">barcode_scanner</span>
+<span class="font-label-md text-label-md">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform rounded-lg">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span class="font-label-md text-label-md">Analysis</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 hover:bg-surface-variant dark:hover:bg-on-surface-variant/10 transition-colors active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md font-bold">Profile</span>
+</button>
+</nav>
+</body></html>

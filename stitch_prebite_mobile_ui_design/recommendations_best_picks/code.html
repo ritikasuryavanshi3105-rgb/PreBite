@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PreBite - Recommendations</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#9ff6b2",
+                      "surface-container": "#f0eded",
+                      "on-background": "#1b1b1b",
+                      "on-surface": "#1b1b1b",
+                      "inverse-on-surface": "#f3f0ef",
+                      "primary-fixed-dim": "#73dc8d",
+                      "secondary-fixed": "#9ff6b2",
+                      "on-secondary-fixed-variant": "#005227",
+                      "on-secondary": "#ffffff",
+                      "primary": "#006b32",
+                      "secondary": "#0f6d37",
+                      "on-surface-variant": "#3e4a3f",
+                      "on-primary-fixed-variant": "#005225",
+                      "primary-fixed": "#8ff9a7",
+                      "inverse-surface": "#313030",
+                      "background": "#fcf9f8",
+                      "surface-variant": "#e5e2e1",
+                      "surface-container-high": "#eae7e7",
+                      "surface-bright": "#fcf9f8",
+                      "tertiary-fixed-dim": "#bdcac1",
+                      "on-tertiary-fixed": "#131e19",
+                      "secondary-fixed-dim": "#84d998",
+                      "on-primary-fixed": "#00210b",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#becabc",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#6b7770",
+                      "tertiary-fixed": "#d9e6dd",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#0e8642",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-container-highest": "#e5e2e1",
+                      "tertiary": "#535f58",
+                      "on-primary-container": "#f7fff3",
+                      "outline": "#6e7a6e",
+                      "inverse-primary": "#73dc8d",
+                      "on-tertiary-fixed-variant": "#3e4943",
+                      "surface-dim": "#dcd9d9",
+                      "on-secondary-container": "#19733d",
+                      "on-tertiary-container": "#f5fff7",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#006d33",
+                      "surface": "#fcf9f8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "xl": "40px",
+                      "margin-mobile": "16px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "unit": "4px",
+                      "md": "16px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom Utilities */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .shadow-ambient {
+            box-shadow: 0 4px 12px rgba(11, 107, 54, 0.05);
+        }
+        .shadow-ambient-hover {
+            box-shadow: 0 8px 16px rgba(11, 107, 54, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg pb-24 antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar JSON Component -->
+<header class="bg-surface w-full top-0 sticky z-40">
+<div class="flex items-center justify-between px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-headline-md font-headline-md" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">PreBite</span>
+</div>
+<div class="flex items-center gap-md">
+<button aria-label="Search" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Filter" class="text-on-surface-variant hover:opacity-80 transition-opacity active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-lg space-y-lg">
+<!-- Page Header & Intro -->
+<section class="space-y-sm">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight">Recommendations</h1>
+<h2 class="font-title-lg text-title-lg text-on-surface">Best Recommendations For You</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Products selected based on your preferences, nutrition profile and PreBite score.</p>
+</section>
+<!-- Made For You Summary Card -->
+<section class="bg-secondary-container rounded-xl p-md flex items-start gap-sm shadow-ambient border border-outline-variant/20">
+<div class="bg-surface/50 p-sm rounded-full flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" data-icon="health_and_safety" data-weight="fill">health_and_safety</span>
+</div>
+<div>
+<h3 class="font-title-lg text-[16px] leading-[24px] text-on-secondary-container mb-xs">Made For You</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant">These products match your current preferences and health goals.</p>
+</div>
+</section>
+<!-- Filters Row -->
+<section>
+<div class="flex overflow-x-auto gap-sm pb-sm no-scrollbar">
+<button class="px-4 py-2 rounded-full border border-primary bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap transition-colors shadow-sm">All</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">Top Rated</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">Low Sugar</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">High Protein</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">Low Sodium</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-surface text-on-surface-variant hover:bg-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">For Family</button>
+</div>
+</section>
+<!-- Sort Bar -->
+<section class="flex justify-between items-center py-sm border-b border-surface-variant">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Recommended for you</span>
+<button class="flex items-center gap-xs font-label-md text-label-md text-primary hover:opacity-80 transition-opacity">
+                Sort
+                <span class="material-symbols-outlined text-[18px]" data-icon="expand_more">expand_more</span>
+</button>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1: Amul Masti Dahi -->
+<article class="bg-surface border border-outline-variant rounded-[16px] overflow-hidden shadow-ambient hover:shadow-ambient-hover hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="h-48 w-full relative bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A pristine, high-resolution product shot of a tub of plain yogurt or dahi, presented in a minimalist, bright studio setting. The lighting is soft, high-key, and diffused, emphasizing the pure white of the yogurt and the clean lines of the packaging. The background is a crisp, unblemished white surface, evoking a sense of clinical hygiene and natural health. Slight shadows anchor the product, creating a modern light-mode aesthetic aligned with professional health software." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLXhNkcl9I8fEqH5tjMgcP51sjkg-aueCC4rUz_GJZmrPHYKozm9Hx3GolaAL2fxQNyRjzhe44AYyS8PefUvwlrYwGWRdkw7MA72Tywxrfr4OwHAZHg3-YQDzsYoXmKywoc5ha5KaTdtIa6fBtx2JBOHRPHuFsAIIxt58WNXkgE1koZzguaw6DjDkWFmUqJLAKXiS9X2uZYUEOG78ZSqw--6wXHWyfSM3E33NdF9w2ovQ7iv_jFaEX"/>
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-3 py-1 rounded-full font-title-lg text-[18px] leading-[24px] flex items-center gap-xs shadow-md border border-primary-fixed/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        9.1
+                    </div>
+<button aria-label="Favorite" class="absolute top-sm right-sm bg-surface/90 p-xs rounded-full shadow-sm text-outline hover:text-error transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs truncate">Amul Masti Dahi</h3>
+<div class="mb-md">
+<span class="inline-flex items-center bg-secondary-container text-on-secondary-container font-label-md text-label-md px-2 py-1 rounded-md">Excellent Choice</span>
+</div>
+<div class="flex flex-col gap-xs mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            No added sugar
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Good protein
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Good calcium
+                        </div>
+</div>
+<div class="flex gap-sm mt-auto pt-sm border-t border-surface-variant">
+<button class="flex-1 border border-primary text-primary bg-transparent rounded-[12px] py-2 font-button text-button hover:bg-primary-fixed-dim/10 transition-colors text-center active:scale-[0.98]">
+                            + Compare
+                        </button>
+<button class="flex-1 bg-primary text-on-primary rounded-[12px] py-2 font-button text-button hover:bg-secondary transition-colors text-center shadow-sm active:scale-[0.98]">
+                            View Details
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Mother Dairy Classic Curd -->
+<article class="bg-surface border border-outline-variant rounded-[16px] overflow-hidden shadow-ambient hover:shadow-ambient-hover hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="h-48 w-full relative bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A clean, vibrant top-down shot of a bowl of fresh curd set against a stark white background. The composition is highly geometric and minimal, utilizing negative space to draw focus to the creamy texture of the dairy product. The lighting is bright and evenly distributed, eliminating harsh shadows and contributing to an airy, professional health-tech aesthetic. The overall mood is fresh, pure, and clinical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUJuYittvWR-MgCRSw0IkHjxnzHdmAlwAbrWDzWJt9PXU-vwt05EBYNDC7RDGFVftrSzT5-rRDSCGQcM6SFe7YXbzrLYg9LeJgkmtFVGXQO4tXgp5y8Yv1eKGwcpfAYRdl_sDTP5Ku0EWExzY29SjnZjcID2PIIuV5xxxfkYVgVs-wP9Re5_BDVPCBmxJfjGexg9YLxuELe_c6dtxW9teD0Rm5eeLSIKZgAsI3qTKiCLFxYKQ5PXPg"/>
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-3 py-1 rounded-full font-title-lg text-[18px] leading-[24px] flex items-center gap-xs shadow-md border border-primary-fixed/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        8.8
+                    </div>
+<button aria-label="Favorite" class="absolute top-sm right-sm bg-surface/90 p-xs rounded-full shadow-sm text-outline hover:text-error transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs truncate">Mother Dairy Classic Curd</h3>
+<div class="mb-md">
+<span class="inline-flex items-center bg-secondary-container text-on-secondary-container font-label-md text-label-md px-2 py-1 rounded-md">Great Choice</span>
+</div>
+<div class="flex flex-col gap-xs mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Good protein
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Moderate fat
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Simple ingredients
+                        </div>
+</div>
+<div class="flex gap-sm mt-auto pt-sm border-t border-surface-variant">
+<button class="flex-1 border border-primary text-primary bg-transparent rounded-[12px] py-2 font-button text-button hover:bg-primary-fixed-dim/10 transition-colors text-center active:scale-[0.98]">
+                            + Compare
+                        </button>
+<button class="flex-1 bg-primary text-on-primary rounded-[12px] py-2 font-button text-button hover:bg-secondary transition-colors text-center shadow-sm active:scale-[0.98]">
+                            View Details
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Quaker Oats -->
+<article class="bg-surface border border-outline-variant rounded-[16px] overflow-hidden shadow-ambient hover:shadow-ambient-hover hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="h-48 w-full relative bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A meticulously styled product photograph of a bowl of raw rolled oats alongside its minimalist packaging. The composition is clean and airy, set against a sterile, bright white background typical of modern health-focused apps. Soft, natural-looking high-key lighting casts gentle shadows, highlighting the organic texture of the oats while maintaining a pristine, clinical atmosphere. The overall visual style conveys trustworthiness, natural nutrition, and effortless health." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA94hQo1Uzr61jXM7pYwF33s4f11smh2SkVOCJqxUcX7_91i6YInvlvz42aEPPR-XzLVToFHpMSVpoa7vlqBcivvn0djIHbMTiQefu_gpRy7JFr_FLvoYWhRXYF8ydYyxR6heIWqyWDAI1t-onWTobUl4d4BV8lmW9P89JxVs2nAj4IzmCOFc8cYNGhv_YebBWy_oJxPg54OrnjyRS-eZDmALO7Q3t5hEgEKmvkf6A2Y1JOchWMbQfP"/>
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-3 py-1 rounded-full font-title-lg text-[18px] leading-[24px] flex items-center gap-xs shadow-md border border-primary-fixed/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        8.2
+                    </div>
+<button aria-label="Favorite" class="absolute top-sm right-sm bg-surface/90 p-xs rounded-full shadow-sm text-outline hover:text-error transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs truncate">Quaker Oats</h3>
+<div class="mb-md">
+<span class="inline-flex items-center bg-secondary-container text-on-secondary-container font-label-md text-label-md px-2 py-1 rounded-md">Good Choice</span>
+</div>
+<div class="flex flex-col gap-xs mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            High fiber
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Low added sugar
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Good whole grains
+                        </div>
+</div>
+<div class="flex gap-sm mt-auto pt-sm border-t border-surface-variant">
+<button class="flex-1 border border-primary text-primary bg-transparent rounded-[12px] py-2 font-button text-button hover:bg-primary-fixed-dim/10 transition-colors text-center active:scale-[0.98]">
+                            + Compare
+                        </button>
+<button class="flex-1 bg-primary text-on-primary rounded-[12px] py-2 font-button text-button hover:bg-secondary transition-colors text-center shadow-sm active:scale-[0.98]">
+                            View Details
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 4: Nestlé a+ Milk -->
+<article class="bg-surface border border-outline-variant rounded-[16px] overflow-hidden shadow-ambient hover:shadow-ambient-hover hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="h-48 w-full relative bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A sharp, modern product shot of a carton of milk, isolated against an expansive, pure white background. The image is brightly lit with high-key studio lighting, emphasizing the clean lines of the packaging and the pure white color of the milk. The minimalist setting avoids clutter, ensuring the product is the sole focus. The visual aesthetic is highly clinical, professional, and aligned with modern digital design trends, conveying purity and nutritional value." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDki3wiO_-u2Pva1vY1glZUlceOk8iKd8i_pGlCKAC6JFEOcaqmGd-dbR5lsn7lM1rhjNPzN8ynKdS1HhSHiDd2TxkVq_zuTiagKQqn5GzWmqu3Ke3Q30cpsEgSDJtAu6peS5X6eSsI5yL7_2fUAIg8m4-tDO1Yr1TqfI-fbAStIONkjIDDf6YsmO65cZ7TPa_ObpB6j1t5CHRo0Ty7Yshiktzjko4E49DHeRkY6eAtGbk6rodTbLz"/>
+<div class="absolute top-sm left-sm bg-primary text-on-primary px-3 py-1 rounded-full font-title-lg text-[18px] leading-[24px] flex items-center gap-xs shadow-md border border-primary-fixed/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        8.0
+                    </div>
+<button aria-label="Favorite" class="absolute top-sm right-sm bg-surface/90 p-xs rounded-full shadow-sm text-outline hover:text-error transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs truncate">Nestlé a+ Milk</h3>
+<div class="mb-md">
+<span class="inline-flex items-center bg-secondary-container text-on-secondary-container font-label-md text-label-md px-2 py-1 rounded-md">Good Choice</span>
+</div>
+<div class="flex flex-col gap-xs mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Good protein
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Calcium
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="check_circle">check_circle</span>
+                            Simple ingredients
+                        </div>
+</div>
+<div class="flex gap-sm mt-auto pt-sm border-t border-surface-variant">
+<button class="flex-1 border border-primary text-primary bg-transparent rounded-[12px] py-2 font-button text-button hover:bg-primary-fixed-dim/10 transition-colors text-center active:scale-[0.98]">
+                            + Compare
+                        </button>
+<button class="flex-1 bg-primary text-on-primary rounded-[12px] py-2 font-button text-button hover:bg-secondary transition-colors text-center shadow-sm active:scale-[0.98]">
+                            View Details
+                        </button>
+</div>
+</div>
+</article>
+<!-- Card 5: Hershey's Syrup -->
+<article class="bg-surface border border-outline-variant rounded-[16px] overflow-hidden shadow-ambient hover:shadow-ambient-hover hover:-translate-y-1 transition-all duration-300 flex flex-col group">
+<div class="h-48 w-full relative bg-surface-container overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A slick, high-contrast product shot of a bottle of chocolate syrup, styled in a minimalist, bright studio environment. The dark brown of the product creates a striking contrast against the pristine, high-key white background. The lighting is sophisticated, creating subtle reflections on the glossy packaging while maintaining an airy, modern light-mode look. The overall aesthetic is clinical yet appetizing, fitting seamlessly into a high-end health application interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvNpY_D6tqDjEEdCf0CCG3sE_VGYHOL-YmJ502QG0t2-NX3c7HmKTlaYE9n-_dG6r_8PIpEmkJeZL8hfvCgCoOt8064xSac2_AgEwSkoY18EOZd_Qb-Yh4W7nFNAIzyI7FDFsYNi14leR0z-17fjEp9wGPoaQjSgPE2fMHMA8q9QKf3Ie-7biWBqi88i6lASupGq9M_15zUFbsvvXsoUfdEJfG7ULA4td0fLQJyHL0NogpMDOJBFKT"/>
+<div class="absolute top-sm left-sm bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-title-lg text-[18px] leading-[24px] flex items-center gap-xs shadow-md border border-tertiary-fixed/20 backdrop-blur-md">
+<span class="material-symbols-outlined text-[16px]" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+                        6.8
+                    </div>
+<button aria-label="Favorite" class="absolute top-sm right-sm bg-surface/90 p-xs rounded-full shadow-sm text-outline hover:text-error transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-xs truncate">Hershey's Syrup</h3>
+<div class="mb-md">
+<span class="inline-flex items-center bg-surface-variant text-on-surface-variant font-label-md text-label-md px-2 py-1 rounded-md border border-outline-variant/50">Occasional Choice</span>
+</div>
+<div class="flex flex-col gap-xs mb-lg flex-grow">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]" data-icon="warning">warning</span>
+                            Higher added sugar
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-tertiary text-[18px]" data-icon="info">info</span>
+                            Use in moderation
+                        </div>
+</div>
+<div class="flex gap-sm mt-auto pt-sm border-t border-surface-variant">
+<button class="flex-1 border border-primary text-primary bg-transparent rounded-[12px] py-2 font-button text-button hover:bg-primary-fixed-dim/10 transition-colors text-center active:scale-[0.98]">
+                            + Compare
+                        </button>
+<button class="flex-1 bg-primary text-on-primary rounded-[12px] py-2 font-button text-button hover:bg-secondary transition-colors text-center shadow-sm active:scale-[0.98]">
+                            View Details
+                        </button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar JSON Component -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container-lowest dark:bg-surface-container-low border-t border-outline-variant shadow-sm hidden md:hidden flex justify-around items-center h-20 px-2 pb-2">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="barcode_scanner">barcode_scanner</span>
+<span class="font-label-md text-label-md">Scan</span>
+</button>
+<!-- Active Tab: Analysis -->
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined mb-1" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md font-bold">Analysis</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:bg-surface-variant transition-colors active:scale-90 transition-transform rounded-full group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</button>
+</nav>
+<!-- Mobile BottomNav Display Logic helper -->
+<style>
+        @media (max-width: 767px) {
+            nav.fixed { display: flex !important; }
+        }
+    </style>
+</body></html>

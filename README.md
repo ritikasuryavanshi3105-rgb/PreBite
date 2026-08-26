@@ -1,17 +1,68 @@
-# prebite
+# 🍏 PreBite
 
-A new Flutter project.
+> Make smarter food choices, one scan at a time.
 
-## Getting Started
+PreBite is a Flutter-based mobile application designed to help users understand food products and make healthier choices through product analysis, nutrition insights, ingredient information, product comparison, and personalized recommendations.
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 📱 Barcode Scanner UI
+- 🥗 Product Health Analysis
+- 🧾 Detailed Ingredient Information
+- 📊 Nutrition Analysis
+- 🔄 Product Comparison
+- ⭐ Personalized Recommendations & Best Picks
+- ❤️ Favorites and Scan History
+- 👨‍👩‍👧 Family Profiles & Allergen Configuration
+- 🤖 AI Assistant *(planned backend integration)*
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 🛠️ Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Frontend
+- **Flutter**
+- **Dart**
+- **Material 3**
+- **GoRouter** for navigation
+
+### Architecture
+- Feature-first architecture
+- Clean Architecture principles
+- Repository pattern
+- Reusable Design System
+- Reusable UI components
+
+### Planned Backend
+- **FastAPI (Python)**
+- **PostgreSQL**
+- **JWT Authentication**
+- **REST APIs**
+- **HTTPS**
+- Backend-based AI integration
+
+## 📱 Implemented Screens
+
+- Splash & Login
+- Home Dashboard
+- Barcode Scanner
+- Product Overview
+- Product Ingredients
+- Product Nutrition
+- Product Comparison
+- Recommendations & Best Picks
+
+## 🏗️ Project Structure
+
+```text
+lib/
+├── core/
+│   ├── routing/
+│   └── theme/
+├── features/
+│   ├── splash/
+│   ├── home/
+│   ├── scanner/
+│   ├── product/
+│   ├── comparison/
+│   └── recommendations/
+└── shared/
+    └── widgets/
